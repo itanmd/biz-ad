@@ -1,8 +1,8 @@
 import  { useEffect, useState } from "react";
-import Card, { CardType } from "./Card/Card";
+import Cards, { CardType } from "./Cards/Cards";
 import Title from "../Title/Title";
 import "./Menu.css";
-// import { getRequest } from "../../services/apiService";
+import { getRequest } from "../../services/apiService";
 
 export type displayMode = 'grid' | 'list';
 
@@ -47,7 +47,7 @@ function Menu(props: MenuProps) {
     return (
         <>
             <Title text="BizAd">
-                <small>Advertising your bussiness</small>
+                <small>Advertising your business</small>
             </Title>
 
             <div className="d-flex justify-content-between px-5">

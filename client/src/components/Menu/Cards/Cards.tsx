@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import "./Card.css";
+import "./Cards.css";
 
 export type CardType = {
     _id: string;
@@ -52,6 +52,6 @@ class Card extends React.Component<Props> {
 
 
 
-// export default Card ;
+export default Card ;
 
 
