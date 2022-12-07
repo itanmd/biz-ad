@@ -1,32 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './components/About/About';
+import Login from './components/auth/Login';
+import SignUp from './components/auth/SignUp';
+import PrivateRouter from './components/auth/PrivateRouter';
 import Header from './components/Header/Header';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from "./components/Menu/Menu"
-// import Card from './components/Card/Card';
+import Services from './components/Services/Service/Service';
+import Menu from './components/Menu/Menu';
 
 function App() {
-  return (
-   <>
-   <Header />
-   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
-   </BrowserRouter>
-   {/* <div>
-    <Card name="Play Ground"
-    description= "Playground for children"
-    street="Some Street 5, Tel Aviv" 
-    imageUrl="https://cdn.pixabay.com/photo/2013/04/02/19/54/playground-99509_960_720.jpg"
-    website="https://www.toplinerec.com/"
-    phone="03-5550000"
-    />
-   </div> */}
 
-   </>
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <PrivateRouter>
+              <Menu defaultDisplay='grid' />
+            </PrivateRouter>
+          } />
+        <Route
+          path='/services'
+          element={
+            <PrivateRouter>
+              <Services />
+            </PrivateRouter>
+          } />
+
+        <Route
+          path='/about'
+          element={
+            <PrivateRouter>
+              <About />
+            </PrivateRouter>
+          } />
+        <Route
+          path='/editService'
+          element={
+            <PrivateRouter>
+              <EditService />
+            </PrivateRouter>
+          } />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
+      </Routes>
+    </>
   );
 }
 
