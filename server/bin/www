@@ -9,6 +9,8 @@
  var http = require('http');
  const mongoose = require('mongoose')
  const config = require('../config/dev')
+
+ mongoose.set('strictQuery', true);
  /**
   * Get port from environment and store in Express.
   */
