@@ -28,7 +28,7 @@ Business Advertising with React.
     `npm i jsonwebtoken`
 3. Install dependencies for React client:  
     `npm install`
-    * Install the following packages: bootstrap, bootstrp-icons, react-router-dom, formik 
+    * Install the following packages: bootstrap, bootstrap-icons, react-router-dom, formik 
     `npm i bootstrap bootstrap-icons`
     `npm i react-router-dom @types/react-router-dom`
     `npm install formik --save`
