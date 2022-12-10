@@ -5,8 +5,9 @@ import Login from './components/auth/Login';
 import SignUp from './components/auth/SignUp';
 import PrivateRouter from './components/auth/PrivateRouter';
 import Header from './components/Header/Header';
-import Services from './components/Services/Service/Service';
+import Services from './components/Services/Services';
 import Menu from './components/Menu/Menu';
+import EditService from './components/Services/EditService';
 
 function App() {
 
